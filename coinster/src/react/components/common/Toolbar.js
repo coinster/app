@@ -8,43 +8,43 @@ import SettingsImage from  '../../assets/images/Toolbar/settings.png'
 
 class ToolBar extends Component {
 
-	renderToolBarItem(item, index) {
+    renderToolBarItem(item, index) {
 
-		if (window.location.pathname !== item.url) {
+        if (window.location.pathname !== item.url) {
 
-			return (
-				<Link className="coinster-tooltbar-item" key={index} to={item.url}>
-					<img alt={item.url.split('/')[1]} src={item.imgsrc} />
-				</Link>
-			);
+            return (
+                <Link className="coinster-tooltbar-item" key={index} to={item.url}>
+                    <img alt={item.url.split('/')[1]} src={item.imgsrc} />
+                </Link>
+            );
 
-		}
+        }
 
-		return false;
-	}
+        return false;
+    }
 
-	render() {
+    render() {
 
-		const toolBarItems = [
-			// {
-			// 	imgsrc: HomeImage,
-			// 	url: '/list'
-			// },
-			{
-				imgsrc: SettingsImage,
-				url: '/settings'
-			}
-		];
+        const toolBarItems = [
+            // {
+            // 	imgsrc: HomeImage,
+            // 	url: '/list'
+            // },
+            {
+            imgsrc: SettingsImage,
+            url: '/settings'
+            }
+        ];
 
-	    return (
-	        <div className="coinster-toolbar">
-	      	    {
-	      		    toolBarItems.map((item, index) => {
-		      		    return this.renderToolBarItem(item, index)
-		      	    })
-		        }
-	        </div>
-	    );
-	}
+        return (
+            <div className="coinster-toolbar">
+                {
+                    toolBarItems.map((item, index) => {
+                        return this.renderToolBarItem(item, index)
+                    })
+                }
+            </div>
+        );
+    }
 }
 export default ToolBar;

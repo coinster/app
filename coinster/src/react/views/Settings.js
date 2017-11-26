@@ -8,39 +8,41 @@ import * as DEFAULTS from '../configs/Defaults';
 @inject('Store')
 @observer
 class Settings extends Component {
-	
-	getSelectedCurrency() {
-		return this.props.Store.currency;		
-	}
 
-	handleCurrencyChange(event) {
-		localStorage.setItem('coinster_currency', event.target.value);
+    getSelectedCurrency() {
 
-		this.props.Store.setCurrency(event.target.value);
-	}
+        return this.props.Store.currency;		
+    }
 
-	renderOptions() {
-		return DEFAULTS.AVAILABLE_CURRENCIES.map((currency, index) => {
+    handleCurrencyChange(event) {
+        
+        localStorage.setItem('coinster_currency', event.target.value);
 
-			return (
-				<option key={index} value={currency}>{currency}</option>
-			);
+        this.props.Store.setCurrency(event.target.value);
+    }
 
-		});
-	}
+    renderOptions() {
 
-	render() {
-		return (
-			<div>
-				Select currency: 
-				<Select 
-					value={this.getSelectedCurrency()}
-					onChange={(event) => this.handleCurrencyChange(event)}
-					options={this.renderOptions()}
-				/>
-			</div>
-		);
-	}
+        return DEFAULTS.AVAILABLE_CURRENCIES.map((currency, index) => {
+
+            return (
+                <option key={index} value={currency}>{currency}</option>
+            );
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                Select currency: 
+                <Select 
+                    value={this.getSelectedCurrency()}
+                    onChange={(event) => this.handleCurrencyChange(event)}
+                    options={this.renderOptions()}
+                />
+            </div>
+        );
+    }
 }
 
 export default Settings;

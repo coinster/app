@@ -7,14 +7,14 @@ import Main from './Main';
 
 class App extends Component {
 
-	render() {
-		return (
-			<div className="coinster-app">
-				<Toolbar />
-				<Header />
-				<Main />
-			</div>
-		);
-	}
+    render() {
+        return (
+            <div className="coinster-app">
+                <Toolbar />
+                <Header />
+                <Main />
+            </div>
+        );
+    }
 }
 export default App;
