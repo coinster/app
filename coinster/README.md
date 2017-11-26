@@ -1,7 +1,10 @@
 
 To install: Clone repository, go into dir and type; npm install
+
 To start application : npm start
+
 To test application: npm test jest-enzyme
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
