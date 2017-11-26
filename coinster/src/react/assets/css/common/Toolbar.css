@@ -1,0 +1,18 @@
+.coinster-toolbar {
+    height: 30px;
+    width: 100%;
+    background: #60dbfb;
+}
+
+.coinster-toolbar .coinster-tooltbar-item {
+    display: inline-block;
+    max-width: 100%;
+    min-width: 50%;
+    text-align: center;
+}
+
+.coinster-toolbar .coinster-tooltbar-item img {
+    max-height: 24px;
+    padding-top: 3px;
+}
+
