@@ -33,7 +33,7 @@ class CryptocurrencyDetails extends Component {
         if (!cryptocurrencyItem || !selectedCurrency) return <Loader />;
 
         return(
-            <div>
+            <div className="coinster-crypto-details">
                 <CryptocurrencyDetailsItem
                     cryptocurrencyItem={cryptocurrencyItem}
                     selectedCurrency={selectedCurrency}

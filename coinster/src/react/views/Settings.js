@@ -33,7 +33,7 @@ class Settings extends Component {
 
     render() {
         return (
-            <div>
+            <div className="coinster-settings">
                 Select currency: 
                 <Select 
                     value={this.getSelectedCurrency()}

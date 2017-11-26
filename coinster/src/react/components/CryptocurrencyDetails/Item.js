@@ -9,7 +9,6 @@ render() {
 
     return (
             <div className="coinster-crypto-details-item">
-                <br />
                 Rank: {cryptocurrencyItem.rank} <br />
                 Name: {cryptocurrencyItem.name} <br />
                 Symbol: {cryptocurrencyItem.symbol} <br />
