@@ -14,7 +14,7 @@ class Settings extends Component {
 	}
 
 	handleCurrencyChange(event) {
-        localStorage.setItem('coinster_currency', event.target.value);
+		localStorage.setItem('coinster_currency', event.target.value);
 
 		this.props.Store.setCurrency(event.target.value);
 	}
@@ -29,18 +29,18 @@ class Settings extends Component {
 		});
 	}
 
-    render() {
-        return (
-            <div>
-            	Select currency: 
-            	<Select 
-            		value={this.getSelectedCurrency()}
-            		onChange={(event) => this.handleCurrencyChange(event)}
-            		options={this.renderOptions()}
-            	/>
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div>
+				Select currency: 
+				<Select 
+					value={this.getSelectedCurrency()}
+					onChange={(event) => this.handleCurrencyChange(event)}
+					options={this.renderOptions()}
+				/>
+			</div>
+		);
+	}
 }
 
 export default Settings;

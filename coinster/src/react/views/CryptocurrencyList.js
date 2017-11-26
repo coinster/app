@@ -18,11 +18,10 @@ class CryptocurrencyList extends Component {
     componentWillUnmount() {
 
         this.props.Store.clearCryptocurrencyList();
-
     }
 
     fetchData = () => {
-        
+
         this.props.Store.fetchCryptocurrencyList();
     }
 

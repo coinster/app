@@ -12,11 +12,11 @@ registerServiceWorker();
 const stores = { Store: Store };
 
 const router = (
-  	<Provider {...stores}>
+	<Provider {...stores}>
 		<BrowserRouter>
-    	    <App />
-    	</BrowserRouter>
-  	</Provider>
+			<App />
+		</BrowserRouter>
+	</Provider>
 );
 
 render(router, document.getElementById("root"));

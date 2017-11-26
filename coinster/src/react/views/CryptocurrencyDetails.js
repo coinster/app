@@ -32,8 +32,8 @@ class CryptocurrencyDetails extends Component {
 
         if (!cryptocurrencyItem || !selectedCurrency) return <Loader />;
 
-	  	return(
-		  	<div>
+        return(
+            <div>
                 <CryptocurrencyDetailsItem
                     cryptocurrencyItem={cryptocurrencyItem}
                     selectedCurrency={selectedCurrency}
@@ -41,8 +41,8 @@ class CryptocurrencyDetails extends Component {
 
                 <Button value={'Refresh'} action={this.fetchData} />
 
-	        </div>
-		);
+            </div>
+        );
     }
 }
 
